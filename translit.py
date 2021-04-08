@@ -23,7 +23,8 @@ with open('encode.pkl', 'rb') as f:
 
 def request(q, lang):
     conn = http.client.HTTPSConnection('inputtools.google.com')
-    conn.request('GET', '/request?text=' + q + '&itc=' + lang + '&num=1&cp=0&cs=1&ie=utf-8&oe=utf-8&app=test')
+    conn.request('GET', '/request?text=' + q + '&itc=' + lang +
+            '&num=1&cp=0&cs=1&ie=utf-8&oe=utf-8&app=test')
     res = conn.getresponse()
     return res
 
@@ -56,22 +57,17 @@ def convert(stops):
                 op = ''
                 for i in range(l):
                     while(x[d]!='\\'):
-                        op += x[d] 
+                        op += x[d]
                         d += 1
                     op+=encode[x[d:d+12]]
                     d+=12
                 h += op
             h += ' '
-        hin.append(h[:-1]+'\n')
-        return hin
+        hin.append(h[:-1]+"\n")
+    return hin
 
 if __name__ == "__main__":
     inp = "n"
-    inp = input("Input: ", )
-    while(inp!="q"):
-        inp += ' \n'
-        stops = [inp]
-        hin = convert(stops)
-        print(hin[0])
-        inp = input("Input: ", )
-        
+    stops = ["rohtak marg", "nirman vihar", "ghazipur depot", "tilak nagar"]
+    hin = convert(stops)
+    print(hin)
