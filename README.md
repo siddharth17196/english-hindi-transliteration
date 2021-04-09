@@ -8,7 +8,7 @@ A python package for transliterations from english to multiple indian languages
 ## Installation
 Recommended to create a virtual environment and then install.
 ```bash
-pip install git+https://github.com/siddharth17196/english-hindi-Transliteration
+pip install git+https://github.com/siddharth17196/english-hindi-transliteration
 ```
 
 
