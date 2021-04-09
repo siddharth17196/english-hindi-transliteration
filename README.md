@@ -6,9 +6,8 @@ A python package for transliterations from english to multiple indian languages
 > Transliteration refers to the process of converting text in one script into another. (not translation)
 
 ## Installation
-Recommended to create a virtual environment and then install the requirements.(ex given below is for linux)
+Recommended to create a virtual environment and then install.
 ```bash
-python -m venv .env
 pip install git+https://github.com/siddharth17196/english-hindi-Transliteration
 ```
 
