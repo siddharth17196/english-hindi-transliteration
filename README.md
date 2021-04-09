@@ -1,15 +1,47 @@
 # english-hindi-transliteration
 
+A python package for transliterations from english to multiple indian languages
+
+
 > Transliteration refers to the process of converting text in one script into another. (not translation)
 
+## Installation
 Recommended to create a virtual environment and then install the requirements.(ex given below is for linux)
-```
+```bash
 python -m venv .env
-source .env/bin/activate
-pip install -r requirements.txt
+pip install git+https://github.com/siddharth17196/english-hindi-Transliteration
 ```
-The UTF-8 to character encodings were referenced from [here](https://www.utf8-chartable.de/unicode-utf8-table.pl?start=2304&number=128&names=-&utf8=string-literal)
 
-Run `python translit.py` with input as a sentence/word/words in english and the program prints the input in hindi 
+
+## Usage
+
+``` python
+>>>from elt import translit
+
+>>>to_hindi = translit('hindi')
+>>>to_hindi.convert(['hello world', 'namaste'])
+
+['हेलो वर्ल्ड', 'नमस्ते']
+```
+
+## Supported Languages
+
+| Languages |
+|-----------|
+| hindi     |
+| telegu    |
+| bengali   |
+| marathi   |
+| malayalam |
+| odiya     |
+| tamil     |
+| sanskrit  |
+| urdu      |
+| kannada   |
+| gujarati  |
+| punjabi   |
+
+
+### References
 
 [Google input tools](https://www.google.co.in/inputtools/try/)
